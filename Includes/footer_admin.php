@@ -58,7 +58,7 @@
         </div>
         <hr class="horizontal dark my-sm-4">
        
-          <h6 class="mt-3">Todo lo que hagas, hazlo con el mismo amor y pasión que desborda tu persona
+          <h6 class="mt-3">Todo lo que hagas, hazlo con el mismo amor y pasión que entregas en cada trabajo o cosa que hagas. Te amo sos la mejor !!! 
              <i class="material-icons" style="color: red;">favorite</i>   <i class="material-icons" style="color: red;">favorite</i>  <i class="material-icons" style="color: red;">favorite</i>!</h6>
          
         </div>

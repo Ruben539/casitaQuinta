@@ -27,19 +27,11 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="../Templates/roles.php">
-            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">manage_accounts</i>
-            </div>
-            <span class="nav-link-text ms-1">Roles del Sistema</span>
-          </a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link text-white " href="../Templates/facturacion.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">medication</i>
+              <i class="material-icons opacity-10">celebration</i>
             </div>
-            <span class="nav-link-text ms-1">Registro de Pacientes</span>
+            <span class="nav-link-text ms-1">Registro de Eventos</span>
           </a>
         </li>
         <li class="nav-item">
@@ -47,13 +39,13 @@
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">receipt_long</i>
             </div>
-            <span class="nav-link-text ms-1">Comprobantes</span>
+            <span class="nav-link-text ms-1">PDF Eventos</span>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white " href="../Templates/servicios.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">monitor_heart</i>
+              <i class="material-icons opacity-10">liquor</i>
             </div>
             <span class="nav-link-text ms-1">Servicios</span>
           </a>
@@ -63,15 +55,15 @@
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">format_textdirection_r_to_l</i>
             </div>
-            <span class="nav-link-text ms-1">Reportes</span>
+            <span class="nav-link-text ms-1">Pago Clientes</span>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white " href="../Templates/pacientes.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">notifications</i>
+              <i class="material-icons opacity-10">cake</i>
             </div>
-            <span class="nav-link-text ms-1">Historial de Pacientes</span>
+            <span class="nav-link-text ms-1">Historial de Eventos</span>
           </a>
         </li>
         <li class="nav-item mt-3">

@@ -79,7 +79,7 @@ if ($resultado == 0) {
 		
 		$id            = $data['id'];
 		$descripcion   = $data['descripcion'];
-		$precio         = $data['precio'];
+		$precio        = $data['precio'];
 		
 
 	}

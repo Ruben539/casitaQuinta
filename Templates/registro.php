@@ -130,7 +130,7 @@ if(!empty($_POST))
           echo '</div>';
 
             echo '<div class="input-group input-group-outline mb-3">';
-            echo '<a href="../View/agregarCliente.php" class="btn btn-lg bg-gradient-primary btn-lg w-100 mt-4 mb-0" >Registrar Cliente <i class="material-icons opacity-10">receipt_long</i></a>';
+            echo '<a href="../Views/agregarCliente.php" class="btn btn-lg bg-gradient-primary btn-lg w-100 mt-4 mb-0" >Registrar Cliente <i class="material-icons opacity-10">receipt_long</i></a>';
             echo '</div>';
         }else{
             $row_count=0;

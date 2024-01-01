@@ -144,7 +144,7 @@ require_once('../Includes/header_admin.php');
 
                                                     ?>
                                                             <option value="<?php echo $rol["id"]; ?>"><?php echo
-                                                                         $rol["descripcion"] ?></option>
+                                                                                                        $rol["descripcion"] ?></option>
 
                                                     <?php
 
@@ -212,15 +212,44 @@ require_once('../Includes/header_admin.php');
                                 <div class="containerImage">
                                     <img class="image" src="../assets/img/logoCasita.png" alt="logo">
                                 </div>
+                                <?php 
+                               
+                                $hoy = date('Y-m-d');
+                               
+                                $detalles =  mysqli_query($conection,"SELECT * FROM eventos 
+                                WHERE  cliente_id =  '".$id."' AND created_at LIKE '%".$hoy."%' AND estatus = 1");
+                                
+                            
 
-                                <div class="containerTexto1">
-                                    <p>Nombre : <?= $nombre; ?></p>
-                                    <p>Fecha de Evento</p>
+                                while($data = mysqli_fetch_array($detalles)){
+                                    $ci           = $data['cedula'];
+                                    $cliente      = $data['cliente'];
+                                    $menu         = $data['menu'];
+                                    $fecha_evento = $data['fecha_evento'];
+                                    $hora_evento  = $data['hora_evento'];
+                                }
+                                
+                                ?>
+                               <?php if(empty($ci) && empty($cliente) && empty($menu) && empty($fecha_evento) && empty($hora_evento)){?>
+                                <div class="containerTexto1"> 
+                                    <p>Nombre : </p>
+                                    <p>Fecha de Evento : </p>
                                 </div>
                                 <div class="containerTexto2">
-                                    <p>Menu : <?= $nombre; ?></p>
-                                    <p>Hora de Evento</p>
+                                    <p>Menu : </p>
+                                    <p>Hora de Evento : </p>
                                 </div>
+                               <?php }else{?>
+                                <div class="containerTexto1"> 
+                                    <p>Nombre : <?= $cliente; ?></p>
+                                    <p>Fecha de Evento : <?= $fecha_evento; ?></p>
+                                </div>
+                                <div class="containerTexto2">
+                                    <p>Menu : <?= $menu; ?></p>
+                                    <p>Hora de Evento : <?= $hora_evento; ?>.hs</p>
+                                </div>
+                               <?php }?>
+                                
                             </div>
 
 
@@ -236,36 +265,46 @@ require_once('../Includes/header_admin.php');
                                             <th>Precio</th>
                                             <th>Cantidad</th>
                                             <th>Total</th>
+                                            <th>Eliminar</th>
                                         </thead>
                                         <tbody>
                                             <?php
                                             require_once("../Models/conexion.php");
 
-                                            $query_evento = mysqli_query($conection, "SELECT  e.cedula,e.cliente,e.fecha_evento,e.hora_evento,e.menu,
+                                            $query_evento = mysqli_query($conection, "SELECT  de.id,e.cedula,e.cliente,e.fecha_evento,e.hora_evento,e.menu,
                                             de.servicio,de.precio,de.cantidad,de.monto_total
                                             FROM eventos e INNER JOIN detalle_eventos de ON de.evento_id = e.id
-                                            WHERE e.estatus = 1");
+                                            WHERE cliente_id =  '".$id."' AND created_at LIKE '%".$hoy."%' AND e.estatus = 1");
 
                                             $resultado = mysqli_num_rows($query_evento);
                                             $nro = 0;
+                                            $total = 0;
 
                                             if ($resultado > 0) {
                                                 while ($data = mysqli_fetch_array($query_evento)) {
                                                     $nro++;
+                                                    $total += $data['monto_total']; 
 
                                             ?>
                                                     <tr class="tr">
                                                         <td><?php echo $nro ?></td>
                                                         <td><?php echo $data['servicio'] ?></td>
-                                                        <td><?php echo number_format($data['precio'], 0, '.', '.') ?> .GS</td>
-                                                        <td><?php echo $data['cantidad'] ?></td>
-                                                        <td><?php echo number_format($data['monto_total'], 0, '.', '.') ?> .GS</td>
+                                                        <td><?php echo number_format($data['precio'], 0, '.', '.') ?> .GS <a class="edit" href="../Views/editarPrecio.php?id=<?php echo $data['id']; ?>"><i class="fas fa-edit"></i></a></td>
+                                                        <td><?php echo $data['cantidad'] ?> <a class="edit" href="../Views/editarCantidad.php?id=<?php echo $data['id']; ?>"><i class="fas fa-edit"></i></a></td>
+                                                        <td><?php echo number_format($data['monto_total'], 0, '.', '.') ?> .GS </td>
+                                                        <td>
+                                                            <button onclick="EliminarItems('<?php echo $data['id']; ?>')" class="btn btn-outline-danger"><i class="fa fa-trash"></i></button>
+                                                        </td>
                                                     </tr>
                                             <?php
                                                 }
                                             } ?>
                                         </tbody>
                                     </table>
+                                </div>
+                                <div class="total">
+                                    <h5 >Total : <span><?php echo number_format($total, 0, '.', '.') ?> .GS</span></h5> 
+                                    
                                 </div>
                             </div>
 
@@ -298,26 +337,37 @@ require_once('../Includes/header_admin.php');
         </div>
     </main>
     <?php include_once('../Includes/footer_admin.php'); ?>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/dataTables.bootstrap.min.js"></script>
+    <script src="../js/Items/items.js"></script>
     <script type="text/javascript">
         let menu = document.getElementById('menu');
 
 
         menu.checked = false;
         document.getElementById('items').style.display = 'none';
-       
+
 
         menu.addEventListener('click', (e) => {
             if (e.target.checked) {
 
                 document.getElementById('items').style.display = 'block';
-               
-            }else{
+
+            } else {
                 menu.checked = false;
                 document.getElementById('items').style.display = 'none';
             }
         })
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
 
-      
+            $('#btnEditarPass').click(function() {
+                /* Act on the event */
+                EliminarItems();
+            });
+        });
     </script>
     <style>
         .containerImage {
@@ -364,5 +414,24 @@ require_once('../Includes/header_admin.php');
             color: #fff;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.25);
 
+            .fas,
+            .btn,
+            .fa {
+                color: #fff;
+            }
+
+        }
+
+        .fas {
+            color: #d63384;
+        }
+
+        .total{
+            text-align: right;
+        }
+
+        .total span{
+                       
+            border-bottom: 3px solid #d63384;
         }
     </style>

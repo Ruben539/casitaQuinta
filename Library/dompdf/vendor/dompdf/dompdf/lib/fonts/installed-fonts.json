@@ -1,0 +1,30 @@
+{
+    "roboto": {
+        "300": "C:\\xampp\\htdocs\\casitaQuinta\\Library\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/roboto_300_21960201651f2ea862182ff34dfd5ead",
+        "normal": "C:\\xampp\\htdocs\\casitaQuinta\\Library\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/roboto_normal_9fa47a070a8b30b595086d70bb7ac78c",
+        "500": "C:\\xampp\\htdocs\\casitaQuinta\\Library\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/roboto_500_d0dcda9e813eb9b854a1cc044831f6fe",
+        "bold": "C:\\xampp\\htdocs\\casitaQuinta\\Library\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/roboto_bold_3d0ad20d45ace845335f9e6c390a09d9",
+        "900": "roboto_900_509a5e5b153550862359e315131088d5"
+    },
+    "roboto slab": {
+        "normal": "C:\\xampp\\htdocs\\casitaQuinta\\Library\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/roboto_slab_normal_89c6a8cb0224612f8e1417e1f9689503",
+        "bold": "roboto_slab_bold_bddee33e767186e6bf5bd0ece0576b18"
+    },
+    "fontawesome": {
+        "normal": "fontawesome_normal_e1a313ca83905f53a32ee29693775520"
+    },
+    "font awesome 6 brands": {
+        "normal": "font_awesome_6_brands_normal_ba95da0e0ed26cb50aa2f3bfa6de4224"
+    },
+    "font awesome 6 free": {
+        "normal": "C:\\xampp\\htdocs\\casitaQuinta\\Library\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/font_awesome_6_free_normal_d14e05f732166b536c9f3e3c128da324",
+        "900": "font_awesome_6_free_900_fc6b653d35d5d856773a176618f15b8a"
+    },
+    "font awesome 5 brands": {
+        "normal": "font_awesome_5_brands_normal_ba95da0e0ed26cb50aa2f3bfa6de4224"
+    },
+    "font awesome 5 free": {
+        "900": "C:\\xampp\\htdocs\\casitaQuinta\\Library\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/font_awesome_5_free_900_fc6b653d35d5d856773a176618f15b8a",
+        "normal": "font_awesome_5_free_normal_d14e05f732166b536c9f3e3c128da324"
+    }
+}

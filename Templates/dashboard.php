@@ -1,7 +1,13 @@
-<?php 
+<?php
 
 include_once('../Includes/header_admin.php');
 ?>
+<link rel="stylesheet" type="text/css" href="../css/fullcalendar.min.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/home.css">
+
 <body class="g-sidenav-show  bg-gray-200">
   <?php include_once('../Includes/nav_admin.php'); ?>
   <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
@@ -18,11 +24,11 @@ include_once('../Includes/header_admin.php');
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
             <div class="input-group input-group-outline">
-             
+
             </div>
           </div>
           <ul class="navbar-nav  justify-content-end">
-           
+
             <li class="nav-item d-flex align-items-center">
               <a href="../Templates/salir.php" class="nav-link text-body font-weight-bold px-0">
                 <i class="fa fa-user me-sm-1"></i>
@@ -58,13 +64,13 @@ include_once('../Includes/header_admin.php');
                 <i class="material-icons opacity-10">person</i>
               </div>
               <div class="text-end pt-1">
-                <p class="text-sm mb-0 text-capitalize">Pacientes del Dia</p>
+                <p class="text-sm mb-0 text-capitalize">Evento del Dia</p>
                 <h4 class="mb-0" id="idPacientesDiarios">0</h4>
               </div>
             </div>
             <hr class="dark horizontal my-0">
             <div class="card-footer p-3">
-            <p class="mb-0"><span class="text-info text-sm font-weight-bolder">Cantidad de Pacientes del dia</span></p>
+              <p class="mb-0"><span class="text-info text-sm font-weight-bolder">El evento del dia actual</span></p>
             </div>
           </div>
         </div>
@@ -75,13 +81,13 @@ include_once('../Includes/header_admin.php');
                 <i class="material-icons opacity-10">groups</i>
               </div>
               <div class="text-end pt-1">
-                <p class="text-sm mb-0 text-capitalize">Pacientes del Mes</p>
+                <p class="text-sm mb-0 text-capitalize">Eventos del Mes</p>
                 <h4 class="mb-0" id="idPacientesMensuales">0</h4>
               </div>
             </div>
             <hr class="dark horizontal my-0">
             <div class="card-footer p-3">
-            <p class="mb-0"><span class="text-success text-sm font-weight-bolder">Total de Pacientes del mes</span></p>
+              <p class="mb-0"><span class="text-success text-sm font-weight-bolder">Todos los eventos del mes</span></p>
             </div>
           </div>
         </div>
@@ -92,13 +98,13 @@ include_once('../Includes/header_admin.php');
                 <i class="material-icons opacity-10">payments</i>
               </div>
               <div class="text-end pt-1">
-                <p class="text-sm mb-0 text-capitalize">Ingreso del Dia</p>
+                <p class="text-sm mb-0 text-capitalize">Costo del evento del Dia</p>
                 <h4 class="mb-0" id="idMontoDiario">0</h4>
               </div>
             </div>
             <hr class="dark horizontal my-0">
             <div class="card-footer p-3">
-              <p class="mb-0"><span class="text-info text-sm font-weight-bolder">Total ingresado en el dia</span></p>
+              <p class="mb-0"><span class="text-info text-sm font-weight-bolder">Total del costo del Evento</span></p>
             </div>
           </div>
         </div>
@@ -109,104 +115,44 @@ include_once('../Includes/header_admin.php');
                 <i class="material-icons opacity-10">payments</i>
               </div>
               <div class="text-end pt-1">
-                <p class="text-sm mb-0 text-capitalize">Monto Mensual</p>
+                <p class="text-sm mb-0 text-capitalize">Monto de los eventos del Mes</p>
                 <h4 class="mb-0" id="idMontoMensual">0</h4>
               </div>
             </div>
             <hr class="dark horizontal my-0">
             <div class="card-footer p-3">
-              <p class="mb-0"><span class="text-success text-sm font-weight-bolder">Rendicion Total de mes</span></p>
+              <p class="mb-0"><span class="text-success text-sm font-weight-bolder">Monto total de todos los eventos</span></p>
             </div>
           </div>
         </div>
       </div>
       <div class="row mt-4">
         <div class="col-lg-4 col-md-6 mt-4 mb-4">
-         
+
         </div>
-      
-       
+
+
       </div>
-      <div class="row mb-4">
-        <div class="col-12">
-          <div class="card">
-            <div class="card-body px-0 pb-2">
-              <div class="table-responsive">
-                <table class="table align-items-center mb-0 text-center">
-                  <thead>
-                    <tr>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nro</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nombre del Paciente</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Cedula</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Estudio</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Estado</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <?php
-                    require_once("../Models/conexion.php");
-                    $hoy = date('Y-m-d');
-                  //  echo $hoy;
-                  //   exit();
 
-                  
-                        $sql = mysqli_query($conection,"SELECT c.id,c.porcentaje,c.created_at,c.estatus,u.nombre,u.cedula,e.descripcion as estudio,c.monto,c.descuento,mp.descripcion as metodo, fp.descripcion AS forma,s.descripcion as sesion
-                        FROM comprobantes c JOIN usuario u on u.id = c.paciente_id
-                        JOIN estudios e ON e.id = c.estudio_id
-                        JOIN metodo_pagos mp ON mp.id = c.metodo_pago_id
-                        JOIN sesiones s ON s.id = c.sesion_id
-                        JOIN usuario us ON us.id = c.usuario
-                        INNER JOIN forma_pagos fp ON fp.id = c.forma_pago_id
-                        where c.created_at LIKE '%".$hoy."%' AND c.estatus = 1");
-
-                        $resultado = mysqli_num_rows($sql);
-                        $monto = 0;
-                        $cont = 0;
-
-                        if($resultado > 0){ 
-                          while ($data = mysqli_fetch_array($sql)){ 
-                            $monto += $data['monto'];
-                            $cont++;
-                    ?>
-                    <tr>
-                      <td><?php echo $cont; ?></td>
-                      <td>
-                        <div class="d-flex px-2 py-1">
-                          <div>
-                            <img src="../assets/img/fisio1.jpg" class="avatar avatar-sm me-3" alt="xd">
-                          </div>
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm"><?php echo $data['nombre'];?></h6>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                      <span class="text-xs font-weight-bold"><?php echo $data['cedula'];?></span>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="text-xs font-weight-bold"><?php echo $data['estudio'];?></span>
-                      </td>
-                      <td class="align-middle">
-                        <div class="progress-wrapper w-75 mx-auto">
-                          <div class="progress-info">
-                            <div class="progress-percentage">
-                              <?php if($data['estatus'] == 1){?>
-                                <h5 class="text-success">Atendido</h5>
-                                <?php }?>
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <?php }
-                    }?>
-                  </tbody>
-                </table>
-              </div>
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+            <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+              <h5 class="text-white text-capitalize ps-3 text-center">Calendario de Eventos</h5>
             </div>
           </div>
+          <?php
+          require_once('../Models/conexion.php');
+          $resulEventos =  mysqli_query($conection, "SELECT id,evento,fecha_evento,color_evento 
+            FROM lista_eventos WHERE estatus = 1");
+
+          ?>
+          <div class="card-body px-0 pb-2">
+            <div id="calendar"></div>
+          </div>
         </div>
-       
+
+
       </div>
       <footer class="footer py-4  ">
         <div class="container-fluid">
@@ -228,3 +174,70 @@ include_once('../Includes/header_admin.php');
     </div>
   </main>
   <?php include_once('../Includes/footer_admin.php') ?>
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/moment.min.js"></script>
+  <script src="../js/fullcalendar.min.js"></script>
+  <script src="../locales/es.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#calendar").fullCalendar({
+        header: {
+          left: "prev,next today",
+          center: "title",
+          right: "month,agendaWeek,agendaDay"
+        },
+
+        locale: 'es',
+
+        defaultView: "month",
+        navLinks: true,
+        editable: true,
+        eventLimit: true,
+        selectable: true,
+        selectHelper: false,
+
+
+
+        events: [
+          <?php
+          while ($dataEvento = mysqli_fetch_array($resulEventos)) { ?> {
+              _id: '<?php echo $dataEvento['id']; ?>',
+              title: '<?php echo $dataEvento['evento']; ?>',
+              start: '<?php echo $dataEvento['fecha_evento']; ?>',
+              end: '<?php echo $dataEvento['fecha_evento']; ?>',
+              color: '<?php echo $dataEvento['color_evento']; ?>'
+            },
+          <?php } ?>
+        ],
+
+
+        //Moviendo Evento Drag - Drop
+        eventDrop: function(event, delta) {
+          var idEvento = event._id;
+          var start = (event.start.format('DD-MM-YYYY'));
+          var end = (event.end.format("DD-MM-YYYY"));
+
+          $.ajax({
+            url: 'drag_drop_evento.php',
+            data: 'start=' + start + '&end=' + end + '&idEvento=' + idEvento,
+            type: "POST",
+            success: function(response) {
+              // $("#respuesta").html(response);
+            }
+          });
+        },
+
+
+      });
+
+
+      //Oculta mensajes de Notificacion
+      setTimeout(function() {
+        $(".alert").slideUp(300);
+      }, 3000);
+
+
+    });
+  </script>

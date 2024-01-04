@@ -50,7 +50,7 @@ if($cliente_id === $idCliente){
         $idEvento            = $data['id'];
     }
 
-  ;
+  
 
     $grabarDetalle_evento =  mysqli_query($conection, "INSERT INTO detalle_eventos(evento_id,servicio,precio,cantidad,monto_total,servicio_id) 
     VALUES('$idEvento','$detalle','$precio','$cantidad','$total','$idServicio')");
@@ -67,6 +67,11 @@ if($cliente_id === $idCliente){
     $grabarEvento = mysqli_query($conection,"INSERT INTO eventos(cedula,cliente,cliente_id,fecha_evento,hora_evento,menu)
                     VALUES('$cedula','$cliente','$cliente_id','$fecha_evento','$hora_evento','$menu')");
 
+
+    $color = ' #d63384';
+    $grabarCalendario = mysqli_query($conection,"INSERT INTO lista_eventos(evento,fecha_evento,color_evento) 
+    VALUES('$cliente','$fecha_evento','$color')");
+
     if($grabarEvento){
         
   
@@ -76,6 +81,7 @@ if($cliente_id === $idCliente){
 
             $idEvento            = $data['id'];
         }
+
 
         $grabarDetalle_evento =  mysqli_query($conection, "INSERT INTO detalle_eventos(evento_id,servicio,precio,cantidad,monto_total,servicio_id) 
         VALUES('$idEvento','$detalle','$precio','$cantidad','$total','$idServicio')");

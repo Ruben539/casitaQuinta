@@ -80,7 +80,7 @@ require_once('../Includes/header_admin.php');
                                 $option = '';
                                 while ($data = mysqli_fetch_array($sql)) {
 
-                                    $iduser     = $data['id'];
+                                    $id         = $data['id'];
                                     $cedula     = $data['cedula'];
                                     $nombre     = $data['nombre'];
                                 }
@@ -212,44 +212,44 @@ require_once('../Includes/header_admin.php');
                                 <div class="containerImage">
                                     <img class="image" src="../assets/img/logoCasita.png" alt="logo">
                                 </div>
-                                <?php 
-                               
-                                $hoy = date('Y-m-d');
-                               
-                                $detalles =  mysqli_query($conection,"SELECT * FROM eventos 
-                                WHERE  cliente_id =  '".$id."' AND created_at LIKE '%".$hoy."%' AND estatus = 1");
-                                
-                            
+                                <?php
 
-                                while($data = mysqli_fetch_array($detalles)){
+                                $hoy = date('Y-m-d');
+
+                                $detalles =  mysqli_query($conection, "SELECT * FROM eventos 
+                                WHERE  cliente_id =  '" . $id . "' AND created_at LIKE '%" . $hoy . "%' AND estatus = 1");
+
+
+
+                                while ($data = mysqli_fetch_array($detalles)) {
                                     $ci           = $data['cedula'];
                                     $cliente      = $data['cliente'];
                                     $menu         = $data['menu'];
                                     $fecha_evento = $data['fecha_evento'];
                                     $hora_evento  = $data['hora_evento'];
                                 }
-                                
+
                                 ?>
-                               <?php if(empty($ci) && empty($cliente) && empty($menu) && empty($fecha_evento) && empty($hora_evento)){?>
-                                <div class="containerTexto1"> 
-                                    <p>Nombre : </p>
-                                    <p>Fecha de Evento : </p>
-                                </div>
-                                <div class="containerTexto2">
-                                    <p>Menu : </p>
-                                    <p>Hora de Evento : </p>
-                                </div>
-                               <?php }else{?>
-                                <div class="containerTexto1"> 
-                                    <p>Nombre : <?= $cliente; ?></p>
-                                    <p>Fecha de Evento : <?= $fecha_evento; ?></p>
-                                </div>
-                                <div class="containerTexto2">
-                                    <p>Menu : <?= $menu; ?></p>
-                                    <p>Hora de Evento : <?= $hora_evento; ?>.hs</p>
-                                </div>
-                               <?php }?>
-                                
+                                <?php if (empty($ci) && empty($cliente) && empty($menu) && empty($fecha_evento) && empty($hora_evento)) { ?>
+                                    <div class="containerTexto1">
+                                        <p>Nombre : </p>
+                                        <p>Fecha de Evento : </p>
+                                    </div>
+                                    <div class="containerTexto2">
+                                        <p>Menu : </p>
+                                        <p>Hora de Evento : </p>
+                                    </div>
+                                <?php } else { ?>
+                                    <div class="containerTexto1">
+                                        <p>Nombre : <?= $cliente; ?></p>
+                                        <p>Fecha de Evento : <?= $fecha_evento; ?></p>
+                                    </div>
+                                    <div class="containerTexto2">
+                                        <p>Menu : <?= $menu; ?></p>
+                                        <p>Hora de Evento : <?= $hora_evento; ?>.hs</p>
+                                    </div>
+                                <?php } ?>
+
                             </div>
 
 
@@ -274,7 +274,7 @@ require_once('../Includes/header_admin.php');
                                             $query_evento = mysqli_query($conection, "SELECT  de.id,e.cedula,e.cliente,e.fecha_evento,e.hora_evento,e.menu,
                                             de.servicio,de.precio,de.cantidad,de.monto_total
                                             FROM eventos e INNER JOIN detalle_eventos de ON de.evento_id = e.id
-                                            WHERE cliente_id =  '".$id."' AND created_at LIKE '%".$hoy."%' AND e.estatus = 1 AND de.estatus = 1");
+                                            WHERE cliente_id =  '" . $id . "' AND created_at LIKE '%" . $hoy . "%' AND e.estatus = 1 AND de.estatus = 1");
 
                                             $resultado = mysqli_num_rows($query_evento);
                                             $nro = 0;
@@ -283,12 +283,12 @@ require_once('../Includes/header_admin.php');
                                             if ($resultado > 0) {
                                                 while ($data = mysqli_fetch_array($query_evento)) {
                                                     $nro++;
-                                                    $total += $data['monto_total']; 
+                                                    $total += $data['monto_total'];
 
                                             ?>
                                                     <tr class="tr">
                                                         <td><?php echo $nro ?></td>
-                                                        <td><?php echo $data['servicio'] ?></td>
+                                                        <td><?php echo $data['servicio'] ?>  <a class="edit" href="../Views/editarDetalle.php?id=<?php echo $data['id']; ?>"><i class="fas fa-edit"></i></a></td>
                                                         <td><?php echo number_format($data['precio'], 0, '.', '.') ?> .GS <a class="edit" href="../Views/editarPrecio.php?id=<?php echo $data['id']; ?>"><i class="fas fa-edit"></i></a></td>
                                                         <td><?php echo $data['cantidad'] ?> <a class="edit" href="../Views/editarCantidad.php?id=<?php echo $data['id']; ?>"><i class="fas fa-edit"></i></a></td>
                                                         <td><?php echo number_format($data['monto_total'], 0, '.', '.') ?> .GS </td>
@@ -303,8 +303,8 @@ require_once('../Includes/header_admin.php');
                                     </table>
                                 </div>
                                 <div class="total">
-                                    <h5 >Total : <span><?php echo number_format($total, 0, '.', '.') ?> .GS</span></h5> 
-                                    
+                                    <h5>Total : <span><?php echo number_format($total, 0, '.', '.') ?> .GS</span></h5>
+
                                 </div>
                             </div>
 
@@ -341,6 +341,15 @@ require_once('../Includes/header_admin.php');
     <script type="text/javascript" src="../js/plugins/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="../js/plugins/dataTables.bootstrap.min.js"></script>
     <script src="../js/Items/items.js"></script>
+    <link rel="stylesheet" href="../node_modules/chosen-js/chosen.css" type="text/css" />
+    <script src="../node_modules/chosen-js/chosen.jquery.min.js"></script>
+    <script src="../node_modules/chosen-js/chosen.jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".chosen").chosen();
+
+        });
+    </script>
     <script type="text/javascript">
         let menu = document.getElementById('menu');
 
@@ -426,12 +435,12 @@ require_once('../Includes/header_admin.php');
             color: #d63384;
         }
 
-        .total{
+        .total {
             text-align: right;
         }
 
-        .total span{
-                       
+        .total span {
+
             border-bottom: 3px solid #d63384;
         }
     </style>

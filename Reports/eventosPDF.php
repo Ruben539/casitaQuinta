@@ -200,7 +200,7 @@ ob_start();
                                     $query_evento = mysqli_query($conection, "SELECT  de.id,e.cedula,e.cliente,e.cliente_id,e.fecha_evento,e.hora_evento,e.menu,
                                             de.servicio,de.precio,de.cantidad,de.monto_total
                                             FROM eventos e INNER JOIN detalle_eventos de ON de.evento_id = e.id
-                                            WHERE e.id =  $id  AND e.estatus = 1");
+                                            WHERE e.id =  $id  AND e.estatus = 1 AND de.estatus = 1");
 
                                     $resultado = mysqli_num_rows($query_evento);
                                     $nro = 0;
@@ -281,6 +281,6 @@ $dompdf->setPaper('A4', 'landscape');
 
 
 $dompdf->render();
-$dompdf->stream('reporte-Comprobante.pdf', array('Attachment' => false));
+$dompdf->stream('evento-'.$cliente.'.pdf', array('Attachment' => false));
 
 ?>

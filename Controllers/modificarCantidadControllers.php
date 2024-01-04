@@ -16,6 +16,7 @@ $alert = '';
 		}else{
 	
 			$id              = $_POST['id'];
+			$servicio        = $_POST['servicio'];
 			$precio          = $_POST['precio'];
 			$cantidad        = $_POST['cantidad'];
 			$idEvento        = $_POST['idEvento'];
@@ -43,7 +44,7 @@ $alert = '';
 	
 		}else{
 	
-			$sql_update = mysqli_query($conection,"UPDATE detalle_eventos SET cantidad = '$cantidad',precio = '$precio',monto_total = '$total'
+			$sql_update = mysqli_query($conection,"UPDATE detalle_eventos SET servicio = '$servicio',cantidad = '$cantidad',precio = '$precio',monto_total = '$total'
 				WHERE id = $id");
 	
 			if ($sql_update) {
@@ -90,6 +91,7 @@ if ($resultado == 0) {
 		$precio        = $data['precio'];
 		$cantidad      = $data['cantidad'];
 		$idEvento      = $data['evento_id'];
+		$servicio      = $data['servicio'];
 		
 
 	}

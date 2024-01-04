@@ -65,6 +65,7 @@ require_once('../Includes/header_admin.php');
                     <input type="hidden" id="id" name="id" value="<?php echo $id; ?>">
                     <input type="hidden" id="idEvento" name="idEvento" value="<?php echo $idEvento; ?>">
                     <input type="hidden" id="cantidad" name="cantidad" value="<?php echo $cantidad; ?>">
+                    <input type="hidden" id="servicio" name="servicio" value="<?php echo $servicio; ?>">
                   <div class="input-group input-group-outline mb-3">
                     <label class="form-label"></label>
                     <input type="text" class="form-control" placeholder="precio" name="precio" id="precio" required value="<?php echo $precio; ?>">

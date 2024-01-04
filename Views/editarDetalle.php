@@ -65,10 +65,10 @@ require_once('../Includes/header_admin.php');
                     <input type="hidden" id="id" name="id" value="<?php echo $id; ?>">
                     <input type="hidden" id="idEvento" name="idEvento" value="<?php echo $idEvento; ?>">
                     <input type="hidden" id="precio" name="precio" value="<?php echo $precio; ?>">
-                    <input type="hidden" id="servicio" name="servicio" value="<?php echo $servicio; ?>">
+                    <input type="hidden" id="cantidad" name="cantidad" value="<?php echo $cantidad; ?>">
                   <div class="input-group input-group-outline mb-3">
                     <label class="form-label"></label>
-                    <input type="text" class="form-control" placeholder="cantidad" name="cantidad" id="cantidad" required value="<?php echo $cantidad; ?>">
+                    <input type="text" class="form-control" placeholder="servicio" name="servicio" id="servicio" required value="<?php echo $servicio; ?>">
                   </div>
                               
                  

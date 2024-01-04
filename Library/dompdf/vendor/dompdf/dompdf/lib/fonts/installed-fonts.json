@@ -26,5 +26,8 @@
     "font awesome 5 free": {
         "900": "C:\\xampp\\htdocs\\casitaQuinta\\Library\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/font_awesome_5_free_900_fc6b653d35d5d856773a176618f15b8a",
         "normal": "font_awesome_5_free_normal_d14e05f732166b536c9f3e3c128da324"
+    },
+    "nucleoicons": {
+        "normal": "nucleoicons_normal_306d5fb7a3d35e2b036fa45e2298971f"
     }
 }

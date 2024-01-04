@@ -274,7 +274,7 @@ require_once('../Includes/header_admin.php');
                                             $query_evento = mysqli_query($conection, "SELECT  de.id,e.cedula,e.cliente,e.fecha_evento,e.hora_evento,e.menu,
                                             de.servicio,de.precio,de.cantidad,de.monto_total
                                             FROM eventos e INNER JOIN detalle_eventos de ON de.evento_id = e.id
-                                            WHERE cliente_id =  '".$id."' AND created_at LIKE '%".$hoy."%' AND e.estatus = 1");
+                                            WHERE cliente_id =  '".$id."' AND created_at LIKE '%".$hoy."%' AND e.estatus = 1 AND de.estatus = 1");
 
                                             $resultado = mysqli_num_rows($query_evento);
                                             $nro = 0;

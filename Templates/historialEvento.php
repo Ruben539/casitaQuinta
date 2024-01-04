@@ -2,7 +2,98 @@
 
 include_once('../Includes/header_admin.php');
 ?>
+<style>
+    .containerImage {
+        position: relative;
+        /* border: 1px solid #f23;*/
+        width: 400px;
+        top: -50px;
 
+    }
+
+    .image {
+        width: 300px;
+        height: 210px;
+    }
+
+    .containerInfo {
+        height: 155px;
+        border-bottom: 2px solid #d63384;
+    }
+
+    .containerTexto1 {
+        position: relative;
+        width: 350px;
+        /*border: 1px solid #f23;*/
+        left: 320px;
+        top: -200px;
+    }
+
+    .containerTexto2 {
+        position: relative;
+        width: 350px;
+        /*border: 1px solid #f23;*/
+        left: 680px;
+        top: -285px;
+    }
+
+    .tr {
+        border-bottom: 1px solid #d63384;
+        cursor: pointer;
+    }
+
+    .tr:hover {
+        background-color: #d63384;
+        color: #fff;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.25);
+
+        .fas,
+        .btn,
+        .fa {
+            color: #fff;
+        }
+
+    }
+
+    .fas {
+        color: #d63384;
+    }
+
+    .total {
+        position: relative;
+        left: 950px;
+        border: 1px solid #d63384;
+        width: 220px;
+        margin-bottom: 5px;
+    }
+
+    .total h5 {
+        margin-left: 5px;
+    }
+
+    .pago {
+        position: relative;
+        left: 950px;
+        border: 1px solid #d63384;
+        width: 220px;
+        margin-bottom: 5px;
+    }
+
+    .pago h5 {
+        margin-left: 5px;
+    }
+
+    .falta {
+        position: relative;
+        left: 950px;
+        border: 1px solid #d63384;
+        width: 220px;
+    }
+
+    .falta h5 {
+        margin-left: 5px;
+    }
+</style>
 <body class="g-sidenav-show  bg-gray-200">
   <?php include_once('../Includes/nav_admin.php'); ?>
   <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
@@ -14,7 +105,7 @@ include_once('../Includes/header_admin.php');
             <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
             <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Dashboard</li>
           </ol>
-          <h6 class="font-weight-bolder mb-0">Impresión de pdf</h6>
+          <h6 class="font-weight-bolder mb-0">Historial de Eventos</h6>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -55,11 +146,11 @@ include_once('../Includes/header_admin.php');
           <div class="card h-100">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
               <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
-                <h5 class="text-white text-capitalize ps-3">Imprimir PDF</h5>
+                <h5 class="text-white text-capitalize ps-3">Historial de Eventos por Clientes.</h5>
               </div>
             </div>
             <div class="card-body">
-              <form method="POST" id='formCliente' name='formCliente'>
+              <form method="POST" id='formHistorial' name='formHistorial'>
                 <div class="form-check form-check-info text-start ps-0">
                   <input class="form-check-input" type="checkbox" value="" id="cedula">
                   <label class="form-check-label" for="flexCheckDefault">
@@ -85,22 +176,15 @@ include_once('../Includes/header_admin.php');
                 <button class="btn btn-success" type="submit">Buscar</button>
               </form>
 
-              <div class="row">
                 <div class="col-md-12">
-                  <div class="tile">
-                    <div class="table-responsive" id="tablaResultado">
+                  <div class="card h-100" id="tablaResultado">
 
-
-
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-
     </div>
 
 
@@ -125,6 +209,10 @@ include_once('../Includes/header_admin.php');
     </div>
   </main>
   <?php include_once('../Includes/footer_admin.php') ?>
+  <script src="../js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/dataTables.bootstrap.min.js"></script>
+    <script src="../js/Items/items.js"></script>
   <script type="text/javascript">
     let cedula = document.getElementById('cedula');
     let nombre = document.getElementById('nombre');
@@ -155,7 +243,7 @@ include_once('../Includes/header_admin.php');
   </script>
 
 <script type="text/javascript">
-  $('#formCliente').submit(function(e) {
+  $('#formHistorial').submit(function(e) {
     e.preventDefault();
 
     var form = $(this);
@@ -163,7 +251,7 @@ include_once('../Includes/header_admin.php');
 
     $.ajax({
       type: "POST",
-      url: '../Data/BuscarClientes.php',
+      url: '../Data/BuscarEvento.php',
       data: form.serialize(),
       success: function(data) {
         $('#tablaResultado').html('');

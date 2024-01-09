@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-01-2024 a las 23:28:52
+-- Tiempo de generación: 09-01-2024 a las 19:50:38
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 7.4.30
 
@@ -351,7 +351,191 @@ INSERT INTO `detalle_eventos` (`id`, `evento_id`, `servicio`, `precio`, `cantida
 (307, 28, 'Cantinero', 200000, 1, 200000, 4, 1),
 (308, 28, 'menores exonerdos', 0, 3, 0, 51, 1),
 (309, 28, 'Menores', 85000, 4, 340000, 66, 1),
-(310, 28, 'Personas', 170000, 214, 36380000, 1, 1);
+(310, 28, 'Personas', 170000, 214, 36380000, 1, 1),
+(311, 29, 'Buffetier', 200000, 1, 200000, 8, 1),
+(312, 29, 'Mesas desnudas', 100000, 3, 300000, 69, 1),
+(313, 29, 'Toldo 10x5 transparente', 1300000, 1, 1300000, 70, 1),
+(314, 29, 'Mozo Adicional', 200000, 2, 400000, 3, 1),
+(315, 29, 'Mozo Incluye', 0, 1, 0, 2, 1),
+(316, 29, 'Menores', 72500, 7, 507500, 66, 1),
+(317, 29, 'Personas', 145000, 134, 19430000, 1, 1),
+(318, 30, 'Personas', 180000, 200, 36000000, 1, 1),
+(319, 30, 'Menores', 90000, 4, 360000, 66, 1),
+(320, 30, 'Pista 8x8', 1600000, 1, 1600000, 37, 1),
+(321, 30, 'Mozo Incluye', 0, 1, 0, 2, 1),
+(322, 30, 'Mozo Adicional', 200000, 9, 1800000, 3, 1),
+(323, 30, 'Cantinero', 200000, 1, 200000, 4, 1),
+(324, 30, 'Buffetier', 200000, 2, 400000, 8, 1),
+(325, 30, 'Conservadora', 60000, 5, 300000, 7, 1),
+(326, 30, 'Bolsa de Hielo 25KG', 35000, 20, 700000, 6, 1),
+(327, 30, 'Garantia', 700000, 1, 700000, 21, 1),
+(328, 30, 'Apa mas de 100 personas', 670000, 1, 670000, 19, 1),
+(329, 30, 'Hora adicional', 700000, 2, 1400000, 59, 1),
+(330, 30, '4 Mozo Adicional horas extras', 100000, 4, 400000, 3, 1),
+(331, 30, 'Sillas para el civil', 10000, 12, 120000, 39, 1),
+(332, 30, 'Tarima 3x4', 550000, 1, 550000, 23, 1),
+(333, 30, 'Juevo de box eco sofa', 440000, 1, 440000, 71, 1),
+(334, 31, 'Juego box eco Poltrona', 350000, 1, 350000, 72, 0),
+(335, 30, 'Juego box eco Poltrona', 350000, 1, 350000, 72, 1),
+(336, 34, 'Sillas para el civil', 10000, 16, 160000, 39, 1),
+(337, 34, 'Apa hasta 100 personas', 450000, 1, 450000, 18, 1),
+(338, 34, 'Garantia', 700000, 1, 700000, 21, 1),
+(339, 34, 'Buffetier', 200000, 1, 200000, 8, 1),
+(340, 34, 'Mozo Adicional', 200000, 3, 600000, 3, 1),
+(341, 34, 'Mozo Incluye', 0, 1, 0, 2, 1),
+(342, 34, 'Menores', 90000, 5, 450000, 66, 1),
+(343, 34, 'Personas', 180000, 68, 12240000, 1, 1),
+(344, 35, 'Anfitriona', 350000, 1, 350000, 27, 1),
+(345, 35, 'Apa hasta 100 personas', 450000, 1, 450000, 18, 1),
+(346, 35, 'Mozo Adicional', 200000, 1, 200000, 3, 1),
+(347, 35, 'Mozo Incluye', 0, 1, 0, 2, 1),
+(348, 35, 'Menores', 85000, 4, 340000, 66, 1),
+(349, 35, 'menores exonerdos', 0, 6, 0, 51, 1),
+(350, 35, 'Personas', 170000, 56, 9520000, 1, 1),
+(351, 35, 'Garantia', 500000, 1, 500000, 21, 1),
+(352, 36, 'Garantia', 700000, 1, 700000, 21, 1),
+(353, 36, 'Anfitriona', 350000, 1, 350000, 27, 1),
+(354, 36, 'Pack de agua con gas', 24000, 3, 72000, 32, 1),
+(355, 36, 'Pack de agua sin gas', 24000, 5, 120000, 33, 1),
+(356, 36, 'Caja de Gaseosa 1l Coca Cola x12', 78000, 3, 234000, 13, 1),
+(357, 36, 'Caja Corona x12 710ml', 185000, 10, 1850000, 9, 1),
+(358, 36, 'Conservadora', 60000, 2, 120000, 7, 1),
+(359, 36, 'Bolsa de Hielo 25KG', 35000, 10, 350000, 6, 1),
+(360, 36, 'Cantinero', 200000, 1, 200000, 4, 1),
+(361, 36, 'Mozo Adicional', 200000, 5, 1000000, 3, 1),
+(362, 36, 'Mozo Incluye', 0, 1, 0, 2, 1),
+(363, 36, 'Personas', 145000, 70, 10150000, 1, 1),
+(364, 37, 'Box de palet y cable', 180000, 2, 360000, 73, 1),
+(365, 37, 'Cerramiento de piscina', 1000000, 1, 1000000, 74, 1),
+(366, 37, 'Copas para tragos', 2000, 50, 100000, 75, 1),
+(367, 37, 'Bolsa de Hielo 25KG', 35000, 12, 420000, 6, 1),
+(368, 37, 'Conservadora', 60000, 3, 180000, 7, 1),
+(369, 37, 'Cantinero', 200000, 1, 200000, 4, 1),
+(370, 37, 'Mozo Incluye', 0, 1, 0, 2, 1),
+(371, 37, 'Mozo Adicional', 200000, 3, 600000, 3, 1),
+(372, 37, 'Garantia', 700000, 1, 700000, 21, 1),
+(373, 37, 'Apa hasta 100 personas', 450000, 1, 450000, 18, 1),
+(374, 37, 'Menores exonerdos', 0, 3, 0, 51, 1),
+(375, 37, 'Menores', 60000, 10, 600000, 66, 1),
+(376, 37, 'Personas', 120000, 102, 12240000, 1, 1),
+(377, 38, 'Garantia', 700000, 1, 700000, 21, 1),
+(378, 38, 'Apa Infantil hasta 100 personas', 270000, 1, 270000, 44, 1),
+(379, 38, 'Anfitriona', 350000, 1, 350000, 27, 1),
+(380, 38, 'Pack de agua con gas', 24000, 2, 48000, 32, 1),
+(381, 38, 'Pack de agua sin gas', 24000, 4, 96000, 33, 1),
+(382, 38, 'Caja de Gaseosa 1l Coca Cola x12', 72000, 2, 144000, 13, 1),
+(383, 38, 'Caja de Coca Zero 1lt ', 72000, 2, 144000, 76, 1),
+(384, 38, 'Caja Hieneken X12 650ml', 175000, 10, 1750000, 11, 1),
+(385, 38, 'Conservadora', 60000, 2, 120000, 7, 1),
+(386, 38, 'Bolsa de Hielo 25KG', 35000, 10, 350000, 6, 1),
+(387, 38, 'Cantinero', 200000, 1, 200000, 4, 1),
+(388, 38, 'Mozo Adicional', 200000, 2, 400000, 3, 1),
+(389, 38, 'Mozo Incluye', 0, 1, 0, 2, 1),
+(390, 38, 'Menores', 65000, 25, 1625000, 66, 1),
+(391, 38, 'Personas', 130000, 75, 9750000, 1, 1),
+(392, 39, 'Garantia', 500000, 1, 500000, 21, 1),
+(393, 39, 'Apa hasta 100 personas', 450000, 1, 450000, 18, 1),
+(394, 39, 'Bolsa de Hielo 25KG', 35000, 10, 350000, 6, 1),
+(395, 39, 'Comida para proveedores', 40000, 8, 320000, 40, 1),
+(396, 39, 'Pack de soda', 30000, 1, 30000, 31, 1),
+(397, 39, 'Pack de agua sin gas', 24000, 6, 144000, 33, 1),
+(398, 39, 'Caja de Gaseosa 1l Coca Cola x12', 78000, 3, 234000, 13, 1),
+(399, 39, 'Conservadora', 60000, 2, 120000, 7, 1),
+(400, 39, 'Cantinero', 200000, 1, 200000, 4, 1),
+(401, 39, 'Mozo Adicional', 200000, 1, 200000, 3, 1),
+(402, 39, 'Mozo Incluye', 0, 1, 0, 2, 1),
+(403, 39, 'Jovenes', 135000, 36, 4860000, 5, 1),
+(404, 39, 'Personas', 170000, 42, 7140000, 1, 1),
+(405, 40, 'Garantia', 700000, 1, 700000, 21, 1),
+(406, 40, 'Barra de tragos Real (100 tragos)', 2000000, 1, 2000000, 57, 1),
+(407, 40, 'Bolsa de Hielo 25KG', 35000, 10, 350000, 6, 1),
+(408, 40, 'Conservadora', 60000, 2, 120000, 7, 1),
+(409, 40, 'Apa hasta 100 personas', 450000, 1, 450000, 18, 1),
+(410, 40, 'Pack de agua con gas', 24000, 2, 48000, 32, 1),
+(411, 40, 'Pack de agua sin gas', 24000, 6, 144000, 33, 1),
+(412, 40, 'Caja de Gaseosa 1l Coca Cola x12', 72000, 3, 216000, 13, 1),
+(413, 40, 'Caja Hieneken X12 650ml', 175000, 13, 2275000, 11, 1),
+(414, 40, 'Cantinero', 200000, 1, 200000, 4, 1),
+(415, 40, 'Mozo Adicional', 200000, 2, 400000, 3, 1),
+(416, 40, 'Mozo Incluye', 0, 1, 0, 2, 1),
+(417, 40, 'Personas', 145000, 80, 11600000, 1, 1),
+(418, 40, 'Servicio de discoteca con Karaoke', 2500000, 1, 2500000, 77, 1),
+(419, 41, 'Tarima 3x4', 420000, 1, 420000, 23, 1),
+(420, 41, 'pista 6x6', 900000, 1, 900000, 29, 1),
+(421, 41, 'Bolsa de Hielo 25KG', 35000, 10, 350000, 6, 1),
+(422, 41, 'Conservadora', 60000, 2, 120000, 7, 1),
+(423, 41, 'Cantinero', 200000, 1, 200000, 4, 1),
+(424, 41, 'Garantia', 700000, 1, 700000, 21, 1),
+(425, 41, 'Apa hasta 100 personas', 450000, 1, 450000, 18, 1),
+(426, 41, 'Mozo Adicional', 200000, 2, 400000, 3, 1),
+(427, 41, 'Mozo Incluye', 0, 1, 0, 2, 1),
+(428, 41, 'Personas', 145000, 80, 11600000, 1, 1),
+(429, 42, 'Comida para proveedores', 40000, 5, 200000, 40, 1),
+(430, 42, 'Toldo 10x10 transparente', 2200000, 1, 2200000, 78, 1),
+(431, 42, 'Pista 6x8', 1200000, 1, 1200000, 24, 1),
+(432, 42, 'Garantia', 700000, 1, 700000, 21, 1),
+(433, 42, 'Buffetier', 200000, 1, 200000, 8, 1),
+(434, 42, 'Conservadora', 60000, 5, 300000, 7, 1),
+(435, 42, 'Bolsa de Hielo 25KG', 35000, 25, 875000, 6, 1),
+(436, 42, 'Cantinero', 200000, 1, 200000, 4, 1),
+(437, 42, 'Mozo Adicional', 200000, 7, 1400000, 3, 1),
+(438, 42, 'Mozo Incluye', 0, 1, 0, 2, 1),
+(439, 42, 'Menores exonerdos', 0, 8, 0, 51, 1),
+(440, 42, 'Menores', 90000, 1, 90000, 66, 1),
+(441, 42, 'Personas', 180000, 148, 26640000, 1, 1),
+(442, 43, 'Garantia', 700000, 1, 700000, 21, 1),
+(443, 43, 'Anfitriona', 350000, 1, 350000, 27, 1),
+(444, 43, 'Apa hasta 100 personas', 450000, 1, 450000, 18, 1),
+(445, 43, 'Conservadora', 60000, 2, 120000, 7, 1),
+(446, 43, 'Bolsa de Hielo 25KG', 35000, 6, 210000, 6, 1),
+(447, 43, 'Mozo Adicional', 200000, 2, 400000, 3, 1),
+(448, 43, 'Mozo Incluye', 0, 1, 0, 2, 1),
+(449, 43, 'Personas', 120000, 80, 9600000, 1, 1),
+(450, 44, 'Decoración de panes', 300000, 1, 300000, 79, 1),
+(451, 44, 'Cantinero', 200000, 1, 200000, 4, 1),
+(452, 44, 'Vino por unidad', 60000, 6, 360000, 80, 1),
+(453, 44, 'Caja de cerveza corona', 180000, 10, 1800000, 12, 1),
+(454, 44, 'Caja de Gaseosa 1l Coca Cola x12', 72000, 4, 288000, 13, 1),
+(455, 44, 'Pack de agua sin gas', 24000, 6, 144000, 33, 1),
+(456, 44, 'Pack de soda', 30000, 2, 60000, 31, 1),
+(457, 44, 'pack de agua tónica', 30000, 4, 120000, 52, 1),
+(458, 44, 'Garantia', 700000, 1, 700000, 21, 1),
+(459, 44, 'Apa hasta 100 personas', 450000, 1, 450000, 18, 1),
+(460, 44, 'Bolsa de Hielo 25KG', 35000, 5, 175000, 6, 1),
+(461, 44, 'Conservadora', 60000, 2, 120000, 7, 1),
+(462, 44, 'pista 6x6', 900000, 1, 900000, 29, 1),
+(463, 44, 'Tabla antipasto', 400000, 2, 800000, 81, 1),
+(464, 44, 'Hora adicional', 700000, 1, 700000, 59, 1),
+(465, 44, 'Alquiler de la casa', 600000, 1, 600000, 65, 1),
+(466, 44, 'Apa hasta 100 personas', 450000, 1, 450000, 18, 1),
+(467, 44, 'Mozo Adicional', 200000, 3, 600000, 3, 1),
+(468, 44, 'Mozo Incluye', 0, 1, 0, 2, 1),
+(469, 44, 'Personas', 165000, 70, 11550000, 1, 1),
+(470, 45, 'Sillas adicionales', 5000, 39, 195000, 82, 1),
+(471, 45, 'Mesa rectangular desnuda pequeña', 0, 1, 0, 83, 1),
+(472, 45, 'Tacitas para café', 0, 1, 0, 84, 1),
+(473, 45, 'Hamburguesas adicionales', 35000, 10, 350000, 63, 1),
+(474, 45, 'Garantia', 700000, 1, 700000, 21, 1),
+(475, 45, 'Apa hasta 100 personas', 450000, 1, 450000, 18, 1),
+(476, 45, 'Buffetier', 200000, 1, 200000, 8, 1),
+(477, 45, 'Toldo ', 600000, 1, 600000, 22, 1),
+(478, 45, 'Conservadora', 50000, 1, 50000, 7, 1),
+(479, 45, 'Cantinero', 200000, 1, 200000, 4, 1),
+(480, 45, 'Mozo Adicional', 200000, 1, 200000, 3, 1),
+(481, 45, 'Mozo Incluye', 0, 2, 0, 2, 1),
+(482, 45, 'Niños', 67500, 6, 405000, 85, 1),
+(483, 45, 'Jovenes', 135000, 34, 4590000, 5, 1),
+(484, 45, 'Personas', 170000, 39, 6630000, 1, 1),
+(485, 46, 'Garantia', 700000, 1, 700000, 21, 1),
+(486, 46, 'Apa hasta 100 personas', 450000, 1, 450000, 18, 1),
+(487, 46, 'Anfitriona', 350000, 1, 350000, 27, 1),
+(488, 46, 'Conservadora', 60000, 1, 60000, 7, 1),
+(489, 46, 'Bolsa de Hielo 25KG', 35000, 5, 175000, 6, 1),
+(490, 46, 'Cantinero', 200000, 1, 200000, 4, 1),
+(491, 46, 'Mozo Adicional', 200000, 3, 600000, 3, 1),
+(492, 46, 'Mozo Incluye', 0, 1, 0, 2, 1),
+(493, 46, 'Personas', 120000, 110, 13200000, 1, 1),
+(494, 47, 'Garantia', 700000, 1, 700000, 21, 1);
 
 -- --------------------------------------------------------
 
@@ -403,7 +587,23 @@ INSERT INTO `eventos` (`id`, `cedula`, `cliente`, `cliente_id`, `fecha_evento`, 
 (25, '10025', 'Estefi y Hugo', 28, '2023-02-04', '21:00', 'Servicio de Asado', '2024-01-04 21:21:10', 1),
 (26, '10026', 'Fiorella Cabrera', 29, '2024-02-04', '21:00', 'Servicio de Asado', '2024-01-04 21:23:47', 1),
 (27, '10027', 'Todegol S.Aa', 30, '2023-08-04', '21:00', 'Buffet de pastas con Carne', '2024-01-04 21:29:03', 1),
-(28, '10028', 'Cynthia y Francisco', 31, '2023-11-04', '21:00', 'Buffet de pastas con Carne', '2024-01-04 22:14:28', 1);
+(28, '10028', 'Cynthia y Francisco', 31, '2023-11-04', '21:00', 'Buffet de pastas con Carne', '2024-01-04 22:14:28', 1),
+(29, '10029', 'Colación Santa teresita', 32, '', '', '', '2024-01-04 22:36:32', 1),
+(30, '10030', 'Laura y Freddy', 33, '2024-01-13', '07:00', 'Buffet de pastas con Carne', '2024-01-04 22:50:55', 1),
+(34, '10031', 'Cynthia y Gustavo', 34, '2023-03-05', '21:00', 'Buffet de pastas con carne', '2024-01-09 16:33:16', 1),
+(35, '10032', 'Ingrid Espinola', 35, '2023-11-05', '21:00', 'Catering para baby shower', '2024-01-09 03:00:00', 1),
+(36, '10033', 'Cynthia Francia', 36, '2024-01-06', '21:00', 'Servicio de asado', '2024-01-09 03:00:00', 1),
+(37, '10034', 'Oscar García', 37, '2023-08-06', '21:00', 'Parrillitas Corridas', '2024-01-09 03:00:00', 1),
+(38, '10035', 'Leticia Alderete', 38, '2023-08-06', '21:00', 'Hamburguesas Gourmet', '2024-01-09 03:00:00', 1),
+(39, '10036', 'Bianca 15 años', 39, '2023-10-06', '21:00', 'Servicio de asado', '2024-01-09 03:00:00', 1),
+(40, '10037', 'Infotec', 40, '2023-12-06', '21:00', 'Servicio de asado', '2024-01-09 03:00:00', 1),
+(41, '10038', 'Fiorella y Andrés', 41, '2023-10-07', '21:00', 'Servicio de asado', '2024-01-09 03:00:00', 1),
+(42, '10039', 'Daysi y Ramón', 42, '2023-12-07', '21:00', 'Buffet de pastas con carne', '2024-01-09 03:00:00', 1),
+(43, '10040', 'Zuny Ayala', 43, '2023-04-08', '21:00', 'Servicio de asado', '2024-01-09 03:00:00', 1),
+(44, '10041', 'Lorena  y Johnhaller', 44, '2023-07-08', '21:00', 'Buffet de pastas con carne', '2024-01-09 03:00:00', 1),
+(45, '10042', 'Ingrid Villasanti', 45, '2023-09-08', '21:00', 'Buffet de pastas con carne', '2024-01-09 03:00:00', 1),
+(46, '10043', 'Cynthia Duré', 46, '2023-12-08', '21:00', 'Parrillitas Corridas', '2024-01-09 03:00:00', 1),
+(47, '10044', 'Jessica Ramirez', 47, '2023-09-07', '21:00', 'Buffet de pastas con carne', '2024-01-09 03:00:00', 1);
 
 -- --------------------------------------------------------
 
@@ -451,7 +651,26 @@ INSERT INTO `lista_eventos` (`id`, `evento`, `fecha_evento`, `color_evento`, `es
 (25, 'Estefi y Hugo', '2023-02-04', ' #d63384', 1),
 (26, 'Fiorella Cabrera', '2024-02-04', ' #d63384', 1),
 (27, 'Todegol S.Aa', '2023-08-04', ' #d63384', 1),
-(28, 'Cynthia y Francisco', '2023-11-04', ' #d63384', 1);
+(28, 'Cynthia y Francisco', '2023-11-04', ' #d63384', 1),
+(29, 'Colación Santa teres', '', ' #d63384', 1),
+(30, 'Laura y Freddy', '2024-01-13', ' #d63384', 1),
+(31, 'Laura y Freddy', '', ' #d63384', 1),
+(32, 'Colación Santa teres', '', ' #d63384', 1),
+(33, 'Laura y Freddy', '', ' #d63384', 1),
+(34, 'Cynthia y Gustavo', '2023-03-05', ' #d63384', 1),
+(35, 'Ingrid Espinola', '2023-11-05', ' #d63384', 1),
+(36, 'Cynthia Francia', '2024-01-06', ' #d63384', 1),
+(37, 'Oscar García', '2023-08-06', ' #d63384', 1),
+(38, 'Leticia Alderete', '2023-08-06', ' #d63384', 1),
+(39, 'Bianca 15 años', '2023-10-06', ' #d63384', 1),
+(40, 'Infotec', '2023-12-06', ' #d63384', 1),
+(41, 'Fiorella y Andrés', '2023-10-07', ' #d63384', 1),
+(42, 'Daysi y Ramón', '2023-12-07', ' #d63384', 1),
+(43, 'Zuny Ayala', '2023-04-08', ' #d63384', 1),
+(44, 'Lorena  y Johnhaller', '2023-07-08', ' #d63384', 1),
+(45, 'Ingrid Villasanti', '2023-09-08', ' #d63384', 1),
+(46, 'Cynthia Duré', '2023-12-08', ' #d63384', 1),
+(47, 'Jessica Ramirez', '2023-09-07', ' #d63384', 1);
 
 -- --------------------------------------------------------
 
@@ -474,7 +693,26 @@ CREATE TABLE `pagos` (
 
 INSERT INTO `pagos` (`id`, `evento_id`, `cliente_id`, `monto`, `created_at`, `estatus`) VALUES
 (1, 1, 4, '300000', '2024-01-01 18:52:31', 1),
-(2, 1, 4, '500000', '2024-01-03 23:57:42', 1);
+(2, 1, 4, '500000', '2024-01-03 23:57:42', 1),
+(3, 30, 33, '1500000', '2024-01-04 23:05:27', 1),
+(4, 30, 33, '3000000', '2024-01-04 23:05:36', 1),
+(5, 30, 33, '5000000', '2024-01-04 23:05:46', 1),
+(6, 30, 33, '10000000', '2024-01-04 23:06:10', 1),
+(7, 30, 33, '10000000', '2024-01-04 23:06:24', 1),
+(8, 34, 34, '1500000', '2024-01-09 16:33:16', 1),
+(9, 35, 35, '1500000', '2024-01-09 16:39:58', 1),
+(10, 36, 36, '1500000', '2024-01-09 16:44:55', 1),
+(11, 37, 37, '1500000', '2024-01-09 16:51:02', 1),
+(12, 38, 38, '1500000', '2024-01-09 16:55:20', 1),
+(13, 39, 39, '1500000', '2024-01-09 17:09:45', 1),
+(14, 40, 40, '1500000', '2024-01-09 17:14:22', 1),
+(15, 41, 41, '1500000', '2024-01-09 17:21:29', 1),
+(16, 42, 42, '1500000', '2024-01-09 17:27:07', 1),
+(17, 43, 43, '1500000', '2024-01-09 17:32:00', 1),
+(18, 44, 44, '1500000', '2024-01-09 17:37:12', 1),
+(19, 45, 45, '1500000', '2024-01-09 17:47:30', 1),
+(20, 46, 46, '1500000', '2024-01-09 17:56:20', 1),
+(21, 47, 47, '1500000', '2024-01-09 18:04:21', 1);
 
 -- --------------------------------------------------------
 
@@ -555,7 +793,7 @@ INSERT INTO `servicios` (`id`, `descripcion`, `precio`, `created_at`, `estatus`)
 (37, 'Pista 8x8', 1600000, '2023-12-31 22:04:22', 1),
 (38, 'Sillas de plastico', 2500, '2023-12-31 22:04:38', 1),
 (39, 'Sillas para el civil', 10000, '2023-12-31 22:04:47', 1),
-(40, 'comida para proveedores', 40000, '2023-12-31 22:04:57', 1),
+(40, 'Comida para proveedores', 40000, '2023-12-31 22:04:57', 1),
 (41, 'Plancha de Smirnoff', 180000, '2023-12-31 22:05:07', 1),
 (42, 'Apa Infantil hasta 50 personas', 150000, '2023-12-31 22:05:20', 1),
 (43, 'Apa Infantil hasta 80 personas', 200000, '2023-12-31 22:05:34', 1),
@@ -566,13 +804,13 @@ INSERT INTO `servicios` (`id`, `descripcion`, `precio`, `created_at`, `estatus`)
 (48, 'Isla para 10 personas', 450000, '2023-12-31 22:06:59', 1),
 (49, 'mesita para el civil', 150000, '2023-12-31 22:07:11', 1),
 (50, 'Vino Malbec por Unidad', 60000, '2023-12-31 22:07:23', 1),
-(51, 'menores exonerdos', 0, '2023-12-31 22:07:34', 1),
+(51, 'Menores exonerdos', 0, '2023-12-31 22:07:34', 1),
 (52, 'pack de agua tónica', 30000, '2023-12-31 22:08:05', 1),
 (53, 'vasos de wisky', 2000, '2023-12-31 22:08:18', 1),
 (54, 'vasos normales', 1500, '2023-12-31 22:08:29', 1),
 (55, 'copas multiuso', 1500, '2023-12-31 22:08:38', 1),
 (56, 'Coca Zero pack de 2litos(4unidades)', 56000, '2023-12-31 22:08:50', 1),
-(57, '100 tragos Real Tragos', 1950000, '2024-01-04 15:16:21', 1),
+(57, 'Barra de tragos Real (100 tragos)', 2000000, '2024-01-04 15:16:21', 1),
 (58, 'Antipasto mas adicional', 45000, '2024-01-04 15:24:43', 1),
 (59, 'Hora adicional', 700000, '2024-01-04 17:51:51', 1),
 (60, 'Hamburgeusas + papas adicional', 35000, '2024-01-04 17:53:30', 1),
@@ -583,7 +821,24 @@ INSERT INTO `servicios` (`id`, `descripcion`, `precio`, `created_at`, `estatus`)
 (65, 'Alquiler de la casa', 600000, '2024-01-04 18:11:29', 1),
 (66, 'Menores', 90000, '2024-01-04 18:33:14', 1),
 (67, 'Choperas', 5000, '2024-01-04 21:07:43', 1),
-(68, 'Tiffany Bar', 240000, '2024-01-04 21:11:42', 1);
+(68, 'Tiffany Bar', 240000, '2024-01-04 21:11:42', 1),
+(69, 'Mesas desnudas', 100000, '2024-01-04 22:38:12', 1),
+(70, 'Toldo 10x5 transparente', 1300000, '2024-01-04 22:38:50', 1),
+(71, 'Juevo de box eco sofa', 440000, '2024-01-04 23:00:20', 1),
+(72, 'Juego box eco Poltrona', 350000, '2024-01-04 23:04:33', 1),
+(73, 'Box de palet y cable', 180000, '2024-01-09 16:49:50', 1),
+(74, 'Cerramiento de piscina', 1000000, '2024-01-09 16:50:04', 1),
+(75, 'Copas para tragos', 2000, '2024-01-09 16:50:35', 1),
+(76, 'Caja de Coca Zero 1lt ', 72000, '2024-01-09 16:57:16', 1),
+(77, 'Servicio de discoteca con Karaoke', 2500000, '2024-01-09 17:15:10', 1),
+(78, 'Toldo 10x10 transparente', 2200000, '2024-01-09 17:28:10', 1),
+(79, 'Decoración de panes', 300000, '2024-01-09 17:35:15', 1),
+(80, 'Vino por unidad', 60000, '2024-01-09 17:35:34', 1),
+(81, 'Tabla antipasto', 400000, '2024-01-09 17:36:19', 1),
+(82, 'Sillas adicionales', 5000, '2024-01-09 17:47:03', 1),
+(83, 'Mesa rectangular desnuda pequeña', 0, '2024-01-09 17:47:58', 1),
+(84, 'Tacitas para café', 0, '2024-01-09 17:48:31', 1),
+(85, 'Niños', 67500, '2024-01-09 17:51:15', 1);
 
 -- --------------------------------------------------------
 
@@ -636,7 +891,23 @@ INSERT INTO `users` (`id`, `cedula`, `nombre`, `usuario`, `pass`, `rol`, `create
 (28, 10025, 'Estefi y Hugo', NULL, NULL, 0, '2024-01-04 21:20:34', 1),
 (29, 10026, 'Fiorella Cabrera', NULL, NULL, 0, '2024-01-04 21:22:27', 1),
 (30, 10027, 'Todegol S.Aa', NULL, NULL, 0, '2024-01-04 21:28:25', 1),
-(31, 10028, 'Cynthia y Francisco', NULL, NULL, 0, '2024-01-04 21:32:34', 1);
+(31, 10028, 'Cynthia y Francisco', NULL, NULL, 0, '2024-01-04 21:32:34', 1),
+(32, 10029, 'Colación Santa teresita', NULL, NULL, 0, '2024-01-04 22:36:19', 1),
+(33, 10030, 'Laura y Freddy', NULL, NULL, 0, '2024-01-04 22:50:48', 1),
+(34, 10031, 'Cynthia y Gustavo', NULL, NULL, 0, '2024-01-09 16:31:38', 1),
+(35, 10032, 'Ingrid Espinola', NULL, NULL, 0, '2024-01-09 16:39:04', 1),
+(36, 10033, 'Cynthia Francia', NULL, NULL, 0, '2024-01-09 16:43:29', 1),
+(37, 10034, 'Oscar García', NULL, NULL, 0, '2024-01-09 16:48:43', 1),
+(38, 10035, 'Leticia Alderete', NULL, NULL, 0, '2024-01-09 16:54:49', 1),
+(39, 10036, 'Bianca 15 años', NULL, NULL, 0, '2024-01-09 17:08:59', 1),
+(40, 10037, 'Infotec', NULL, NULL, 0, '2024-01-09 17:13:55', 1),
+(41, 10038, 'Fiorella y Andrés', NULL, NULL, 0, '2024-01-09 17:21:02', 1),
+(42, 10039, 'Daysi y Ramón', NULL, NULL, 0, '2024-01-09 17:26:37', 1),
+(43, 10040, 'Zuny Ayala', NULL, NULL, 0, '2024-01-09 17:31:39', 1),
+(44, 10041, 'Lorena  y Johnhaller', NULL, NULL, 0, '2024-01-09 17:36:35', 1),
+(45, 10042, 'Ingrid Villasanti', NULL, NULL, 0, '2024-01-09 17:45:37', 1),
+(46, 10043, 'Cynthia Duré', NULL, NULL, 0, '2024-01-09 17:55:52', 1),
+(47, 10044, 'Jessica Ramirez', NULL, NULL, 0, '2024-01-09 18:02:48', 1);
 
 --
 -- Índices para tablas volcadas
@@ -692,25 +963,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `detalle_eventos`
 --
 ALTER TABLE `detalle_eventos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=311;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=495;
 
 --
 -- AUTO_INCREMENT de la tabla `eventos`
 --
 ALTER TABLE `eventos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT de la tabla `lista_eventos`
 --
 ALTER TABLE `lista_eventos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT de la tabla `pagos`
 --
 ALTER TABLE `pagos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -722,13 +993,13 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `servicios`
 --
 ALTER TABLE `servicios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

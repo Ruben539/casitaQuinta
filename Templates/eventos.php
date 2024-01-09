@@ -213,7 +213,7 @@ require_once('../Includes/header_admin.php');
                                     <img class="image" src="../assets/img/logoCasita.png" alt="logo">
                                 </div>
                                 <?php
-
+                                date_default_timezone_set('America/Asuncion');
                                 $hoy = date('Y-m-d');
 
                                 $detalles =  mysqli_query($conection, "SELECT * FROM eventos 
@@ -270,7 +270,7 @@ require_once('../Includes/header_admin.php');
                                         <tbody>
                                             <?php
                                             require_once("../Models/conexion.php");
-
+                                            
                                             $query_evento = mysqli_query($conection, "SELECT  de.id,e.cedula,e.cliente,e.fecha_evento,e.hora_evento,e.menu,
                                             de.servicio,de.precio,de.cantidad,de.monto_total
                                             FROM eventos e INNER JOIN detalle_eventos de ON de.evento_id = e.id

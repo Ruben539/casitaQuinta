@@ -4,6 +4,8 @@ if(!empty($_POST)){
 
 
 require_once('../Models/conexion.php');
+date_default_timezone_set('America/Asuncion');
+$hoy = date('Y-m-d');
 //TODO: Datos necesarios para la carga en la tabla de eventos.
 $cedula        = $_POST['cedula'];
 $cliente       = $_POST['cliente'];
@@ -11,6 +13,7 @@ $cliente_id    = $_POST['cliente_id'];
 $fecha_evento  = $_POST['fecha_evento'];
 $hora_evento   = $_POST['hora_evento'];
 $menu          = $_POST['menu'];
+$fecha         = $hoy;
 
 
 //TODO: Datos necesario para la carga en la tabla del detalle del evento.
@@ -29,7 +32,6 @@ $cantidad = $_POST['cantidad'];
 $total    = $precio * $cantidad;
 
 //TODO: Validacion, si existe un cliente con ese evento en el dia.
-$hoy = date('Y-m-d');
 
 $verificacion =  mysqli_query($conection,"SELECT * FROM eventos WHERE  cliente_id =  '".$cliente_id."' AND created_at LIKE '%".$hoy."%' AND estatus = 1");
 
@@ -64,13 +66,23 @@ if($cliente_id === $idCliente){
 }else{
     
     
-    $grabarEvento = mysqli_query($conection,"INSERT INTO eventos(cedula,cliente,cliente_id,fecha_evento,hora_evento,menu)
-                    VALUES('$cedula','$cliente','$cliente_id','$fecha_evento','$hora_evento','$menu')");
+    $grabarEvento = mysqli_query($conection,"INSERT INTO eventos(cedula,cliente,cliente_id,fecha_evento,hora_evento,menu,created_at)
+                    VALUES('$cedula','$cliente','$cliente_id','$fecha_evento','$hora_evento','$menu','$fecha')");
 
 
     $color = ' #d63384';
     $grabarCalendario = mysqli_query($conection,"INSERT INTO lista_eventos(evento,fecha_evento,color_evento) 
     VALUES('$cliente','$fecha_evento','$color')");
+
+    $evento = mysqli_query($conection, "SELECT * FROM eventos WHERE  estatus = 1 order by id desc limit 1");
+    while ($data = mysqli_fetch_array($evento)) {
+
+        $idEvento            = $data['id'];
+    }
+
+    $monto = 1500000;
+
+    $grabarGarantia = mysqli_query($conection,"INSERT INTO pagos(evento_id,cliente_id,monto) VALUES('$idEvento','$cliente_id','$monto')");
 
     if($grabarEvento){
         

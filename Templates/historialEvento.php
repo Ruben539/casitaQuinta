@@ -61,9 +61,9 @@ include_once('../Includes/header_admin.php');
 
     .total {
         position: relative;
-        left: 950px;
+        left: 850px;
         border: 1px solid #d63384;
-        width: 220px;
+        width: 250px;
         margin-bottom: 5px;
     }
 
@@ -73,9 +73,9 @@ include_once('../Includes/header_admin.php');
 
     .pago {
         position: relative;
-        left: 950px;
+        left: 850px;
         border: 1px solid #d63384;
-        width: 220px;
+        width: 250px;
         margin-bottom: 5px;
     }
 
@@ -85,9 +85,9 @@ include_once('../Includes/header_admin.php');
 
     .falta {
         position: relative;
-        left: 950px;
+        left: 850px;
         border: 1px solid #d63384;
-        width: 220px;
+        width: 250px;
     }
 
     .falta h5 {
